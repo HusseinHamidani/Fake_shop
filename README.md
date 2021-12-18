@@ -4,9 +4,9 @@
 
 
 # build with 
-javascript
-axios 
-react
-redux
-sass
-fontawesome icons
+### javascript
+### axios 
+### react
+### redux
+### sass
+### fontawesome icons
