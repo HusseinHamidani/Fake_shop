@@ -1,0 +1,138 @@
+$hachi: 'Hachi Maru Pop', cursive
+$mochiy: 'Mochiy Pop One', sans-serif
+$poppins: 'Poppins', sans-serif
+$pinkBackgroundColor: #FDA2AF
+$prpulBackgroundColor: #E9B8FA
+$list1: $pinkBackgroundColor , $prpulBackgroundColor
+$shadowWidth: 10px
+@mixin gradient($direction , $list , $color , $width )
+    background: -webkit-linear-gradient($direction,$list)
+    background: -moz-liear-gradient($direction,$list)
+    background: -o-linear-gradient($direction,$list)
+    background: linear-gradient($direction,$list)
+    box-shadow: 0 0 $width $color
+    transition: all .5s
+*,*::before,*::after
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+.main_Products
+    min-height: 100vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 40px
+    background: red
+.main_products_section
+    min-height: 100vh
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: auto
+    grid-gap: 20px
+    padding: 20px
+    scroll-behavior: none
+    place-items: center
+    .card
+        height: 400px
+        width: 300px
+        border: 2px solid gray
+        border-radius: 15px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-direction: column
+        transition: all .5s
+        &:hover
+            @include gradient(120deg , $list1 , $pinkBackgroundColor , $shadowWidth )
+            transition: all .5s
+        .img
+            height: 60%
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            border-bottom: 2px solid lightgray
+            img
+                height: 150px
+                width: auto
+        .content
+            display: flex
+            align-items: start
+            justify-content: space-around
+            flex-direction: column
+            height: 35%
+            padding: 10px
+            h2
+                font-size: 1rem
+                font-family: $poppins
+                font-weight: 400
+                color: black
+.productDeatials
+    min-height: 100vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 40px
+    .product_detail_handler
+        height: 100vh
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-around
+        border: 2px solid $pinkBackgroundColor
+        padding: 20px
+        border-radius: 25px
+        .image_handler
+            width: 50%
+            height: 100%
+            .single_image
+                height: 100%
+                width: 100%
+        .detail_handler
+            background: white
+            height: 100%
+            max-width: 50%
+            display: flex
+            align-items: start
+            justify-content: start
+            flex-direction: column
+            padding-left: 40px
+            h2 , span , h3 ,p , button
+                margin-top: 20px
+                font-family: $poppins
+            button
+                padding: 12px 10px
+                border: 2px solid $prpulBackgroundColor
+                border-radius: 5px
+                background: $pinkBackgroundColor
+                outline: none
+                border: none
+                &:focus
+                    outline: none
+                    border: none
+@media screen and ( max-width: 1266px )
+    .main_products_section
+        grid-template-columns: repeat(3,1fr)
+@media screen and ( max-width: 940px )
+    .main_products_section
+        grid-template-columns: repeat(2,1fr)
+@media screen and ( max-width: 636px )
+    .main_products_section
+        grid-template-columns: 1fr
+@media screen and ( max-width: 600px )
+    .productDeatials
+        .product_detail_handler
+            min-height: 120vh
+            max-width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            .image_handler
+                width: 50%
+                height: 50%
+            .detail_handler
+                max-width: 100%

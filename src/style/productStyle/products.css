@@ -1,0 +1,241 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main_Products {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  background: red;
+}
+
+.main_products_section {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 20px;
+  scroll-behavior: none;
+  place-items: center;
+}
+
+.main_products_section .card {
+  height: 400px;
+  width: 300px;
+  border: 2px solid gray;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main_products_section .card:hover {
+  background: -moz-liear-gradient(120deg, #FDA2AF, #E9B8FA);
+  background: linear-gradient(120deg, #FDA2AF, #E9B8FA);
+  -webkit-box-shadow: 0 0 10px #FDA2AF;
+          box-shadow: 0 0 10px #FDA2AF;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  transition: all .5s;
+}
+
+.main_products_section .card .img {
+  height: 60%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid lightgray;
+}
+
+.main_products_section .card .img img {
+  height: 150px;
+  width: auto;
+}
+
+.main_products_section .card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 35%;
+  padding: 10px;
+}
+
+.main_products_section .card .content h2 {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: black;
+}
+
+.productDeatials {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+}
+
+.productDeatials .product_detail_handler {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid #FDA2AF;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.productDeatials .product_detail_handler .image_handler {
+  width: 50%;
+  height: 100%;
+}
+
+.productDeatials .product_detail_handler .image_handler .single_image {
+  height: 100%;
+  width: 100%;
+}
+
+.productDeatials .product_detail_handler .detail_handler {
+  background: white;
+  height: 100%;
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 40px;
+}
+
+.productDeatials .product_detail_handler .detail_handler h2, .productDeatials .product_detail_handler .detail_handler span, .productDeatials .product_detail_handler .detail_handler h3, .productDeatials .product_detail_handler .detail_handler p, .productDeatials .product_detail_handler .detail_handler button {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.productDeatials .product_detail_handler .detail_handler button {
+  padding: 12px 10px;
+  border: 2px solid #E9B8FA;
+  border-radius: 5px;
+  background: #FDA2AF;
+  outline: none;
+  border: none;
+}
+
+.productDeatials .product_detail_handler .detail_handler button:focus {
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 1266px) {
+  .main_products_section {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .main_products_section {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .main_products_section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .productDeatials .product_detail_handler {
+    min-height: 120vh;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .productDeatials .product_detail_handler .image_handler {
+    width: 50%;
+    height: 50%;
+  }
+  .productDeatials .product_detail_handler .detail_handler {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=products.css.map */

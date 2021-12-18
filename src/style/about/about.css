@@ -1,0 +1,38 @@
+.main_About_container {
+  height: 90vh;
+  width: 100%;
+  padding: 40px;
+}
+
+.main_About_container .main_About_talk {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #FDA2AF;
+  border-radius: 10px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_About_container .main_About_talk .title_about, .main_About_container .main_About_talk .about_this_proect {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #e48cf0;
+  text-shadow: 0 0 5px #d1cbcb;
+}
+
+.main_About_container .main_About_talk .about_this_proect {
+  font-weight: 600;
+}
+/*# sourceMappingURL=about.css.map */
